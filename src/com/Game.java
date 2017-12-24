@@ -33,7 +33,7 @@ public class Game extends JFrame{
 		super();
 		// 多造外围的一圈就可以不用考虑边界了，也就是size+2
 		this.size = size + 2;
-		this.cellNum = size/2;
+		this.cellNum = size*5;
 		cells = new int[this.size][this.size];
 		currentCells = new int[this.size][this.size];
 		initCells();
@@ -59,7 +59,7 @@ public class Game extends JFrame{
 		while (true) {
 			showCells();
 			liveOrDead();
-			Thread.sleep(500);
+			Thread.sleep(100);
 		}
 	}
 	
